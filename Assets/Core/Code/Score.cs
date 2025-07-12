@@ -20,7 +20,7 @@ public class Score : MonoBehaviour
 
     void UpdateScoreText()
     {
-        scoreText.text = "score" + score;
+        scoreText.text = "score " + score;
     }
 }
 
