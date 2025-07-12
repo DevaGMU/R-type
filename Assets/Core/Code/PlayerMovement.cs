@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -5,6 +6,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public GameObject bulletPrefab;
     public Transform firePoint;
+    
 
     void Update()
     {
@@ -21,6 +23,6 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }
